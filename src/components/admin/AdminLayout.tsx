@@ -41,7 +41,7 @@ export function AdminLayout({ children, activeTab, onTabChange }: AdminLayoutPro
                 <Activity className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-semibold">Nexus Care Admin</h1>
+                <h1 className="text-xl font-semibold">LifeSourceAdmin</h1>
                 <p className="text-xs text-muted-foreground">Healthcare Management Platform</p>
               </div>
             </div>

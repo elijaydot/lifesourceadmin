@@ -14,7 +14,7 @@ const Index = () => {
               <Activity className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Nexus Care</h1>
+              <h1 className="text-xl font-bold">LifeSourceAdmin</h1>
               <p className="text-xs text-muted-foreground">Healthcare Management Platform</p>
             </div>
           </div>
@@ -132,10 +132,10 @@ const Index = () => {
               <div className="w-6 h-6 bg-gradient-primary rounded flex items-center justify-center">
                 <Activity className="w-4 h-4 text-white" />
               </div>
-              <span className="font-semibold">Nexus Care Admin Platform</span>
+              <span className="font-semibold">LifeSourceAdmin Platform</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 Nexus Care. Advanced healthcare management system.
+              © 2024 LifeSourceAdmin. Advanced healthcare management system.
             </p>
           </div>
         </div>
