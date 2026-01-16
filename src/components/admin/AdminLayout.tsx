@@ -1,17 +1,20 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { 
-  LayoutDashboard, 
-  Building2, 
-  FileText, 
-  BarChart3, 
+import {
+  LayoutDashboard,
+  Building2,
+  FileText,
+  BarChart3,
   Megaphone,
   Users,
   Activity,
   Bell
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
+import Logo from '@/assets/logo.svg'
+import LogoText from '@/assets/logo-text.svg'
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -37,13 +40,10 @@ export function AdminLayout({ children, activeTab, onTabChange }: AdminLayoutPro
         <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <Activity className="w-5 h-5 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-semibold">LifeSourceAdmin</h1>
-                <p className="text-xs text-muted-foreground">Healthcare Management Platform</p>
-              </div>
+              <Link to="/home" className="flex items-center gap-2">
+                <img src={Logo} className="w-16 h-16" />
+                <img src={LogoText} className="w-[120px]" />
+              </Link>
             </div>
           </div>
           <div className="flex items-center space-x-3">

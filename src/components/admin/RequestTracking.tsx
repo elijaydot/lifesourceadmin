@@ -3,9 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { 
-  FileText, 
-  Search, 
+import {
+  FileText,
+  Search,
   Filter,
   Clock,
   CheckCircle,
@@ -31,21 +31,21 @@ const requests = [
   },
   {
     id: "REQ-2024-002",
-    hospital: "St. Mary's Medical Center", 
+    hospital: "St. Mary's Medical Center",
     location: "Phoenix, AZ",
     type: "A+ Platelets",
     quantity: "8 units",
     urgency: "High",
     status: "In Progress",
     submittedAt: "2024-01-15T09:15:00Z",
-    requiredBy: "2024-01-16T08:00:00Z", 
+    requiredBy: "2024-01-16T08:00:00Z",
     recipient: "Cancer Treatment - Patient #2847",
     notes: "Chemotherapy patient with low platelet count"
   },
   {
     id: "REQ-2024-003",
     hospital: "Regional Health Network",
-    location: "Sacramento, CA", 
+    location: "Sacramento, CA",
     type: "B+ Blood",
     quantity: "3 units",
     urgency: "Medium",
@@ -60,7 +60,7 @@ const requests = [
     hospital: "Metro Emergency Center",
     location: "Phoenix, AZ",
     type: "AB+ Plasma",
-    quantity: "10 units", 
+    quantity: "10 units",
     urgency: "Critical",
     status: "Redirected",
     submittedAt: "2024-01-15T11:20:00Z",
@@ -77,8 +77,8 @@ export function RequestTracking() {
 
   const filteredRequests = requests.filter(request => {
     const matchesSearch = request.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         request.hospital.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         request.type.toLowerCase().includes(searchQuery.toLowerCase());
+      request.hospital.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      request.type.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = statusFilter === "All" || request.status === statusFilter;
     const matchesUrgency = urgencyFilter === "All" || request.urgency === urgencyFilter;
     return matchesSearch && matchesStatus && matchesUrgency;
@@ -97,7 +97,7 @@ export function RequestTracking() {
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
       case "Critical": return "bg-destructive text-destructive-foreground";
-      case "High": return "bg-warning text-warning-foreground"; 
+      case "High": return "bg-warning text-warning-foreground";
       case "Medium": return "bg-accent text-accent-foreground";
       case "Low": return "bg-muted text-muted-foreground";
       default: return "bg-muted text-muted-foreground";
@@ -189,7 +189,7 @@ export function RequestTracking() {
         {filteredRequests.map((request) => {
           const submittedTime = formatDateTime(request.submittedAt);
           const requiredTime = formatDateTime(request.requiredBy);
-          
+
           return (
             <Card key={request.id} className="shadow-soft hover:shadow-medium transition-smooth">
               <CardHeader>
