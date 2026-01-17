@@ -3,9 +3,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { 
-  Building2, 
-  Search, 
+import {
+  Building2,
+  Search,
   Filter,
   MapPin,
   Phone,
@@ -29,7 +29,7 @@ const hospitals = [
     documentsStatus: "Verified"
   },
   {
-    id: "HOSP-002", 
+    id: "HOSP-002",
     name: "St. Mary's Medical Center",
     location: "Phoenix, AZ",
     email: "contact@stmarys.org",
@@ -43,7 +43,7 @@ const hospitals = [
     id: "HOSP-003",
     name: "Valley Medical Institute",
     location: "Sacramento, CA",
-    email: "info@valleymed.org", 
+    email: "info@valleymed.org",
     phone: "+1 (555) 456-7890",
     status: "Pending",
     capacity: 280,
@@ -69,7 +69,7 @@ export function HospitalManagement() {
 
   const filteredHospitals = hospitals.filter(hospital => {
     const matchesSearch = hospital.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         hospital.location.toLowerCase().includes(searchQuery.toLowerCase());
+      hospital.location.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesStatus = statusFilter === "All" || hospital.status === statusFilter;
     return matchesSearch && matchesStatus;
   });
@@ -98,7 +98,7 @@ export function HospitalManagement() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold">Hospital Management</h1>
-          <p className="text-muted-foreground">Manage hospital registrations, approvals, and status</p>
+          <p className="text-muted-foreground">Manage hospital, bloodbanks registrations, verifications, and status</p>
         </div>
         <Button className="bg-gradient-primary hover:opacity-90">
           <Building2 className="w-4 h-4 mr-2" />
@@ -196,7 +196,7 @@ export function HospitalManagement() {
                     {hospital.documentsStatus}
                   </Badge>
                 </div>
-                
+
                 <div className="flex space-x-2">
                   {hospital.status === "Pending" ? (
                     <>
