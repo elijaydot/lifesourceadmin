@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import {
   LayoutDashboard,
   Building2,
   FileText,
   BarChart3,
   Megaphone,
-  Users,
-  Activity,
   Bell
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import Logo from '@/assets/logo.svg'
-import LogoText from '@/assets/logo-text.svg'
+import Logo from '@/assets/logo.svg';
+import LogoText from '@/assets/logo-text.svg';
+import { UserProfileDropdown } from "./UserProfileDropdown";
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -40,22 +38,20 @@ export function AdminLayout({ children, activeTab, onTabChange }: AdminLayoutPro
         <div className="flex h-16 items-center justify-between px-6">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3">
-              <Link to="/home" className="flex items-center gap-2">
-                <img src={Logo} className="w-16 h-16" />
-                <img src={LogoText} className="w-[120px]" />
+              <Link to="/admin" className="flex items-center gap-2">
+                <img src={Logo} className="w-16 h-16" alt="LifeSourceAdmin" />
+                <img src={LogoText} className="w-[120px]" alt="LifeSourceAdmin" />
               </Link>
             </div>
           </div>
           <div className="flex items-center space-x-3">
             <Button variant="ghost" size="icon" className="relative">
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-destructive rounded-full text-xs flex items-center justify-center text-destructive-foreground">
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-secondary rounded-full text-xs flex items-center justify-center text-secondary-foreground">
                 3
               </span>
             </Button>
-            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-              <Users className="w-4 h-4 text-white" />
-            </div>
+            <UserProfileDropdown />
           </div>
         </div>
       </header>

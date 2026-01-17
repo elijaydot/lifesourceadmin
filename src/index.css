@@ -13,26 +13,28 @@ All colors MUST be HSL.
     @apply font-sans;
   }
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    --background: 180 15% 97%;
+    --foreground: 180 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 180 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 180 25% 15%;
 
-    --primary: 210 100% 50%;
+    /* Teal from logo #008080 = hsl(180, 100%, 25%) */
+    --primary: 180 100% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 210 100% 65%;
+    --primary-glow: 180 80% 35%;
 
-    --secondary: 210 10% 95%;
-    --secondary-foreground: 215 25% 15%;
+    /* Red from logo #D32F2F = hsl(0, 65%, 51%) */
+    --secondary: 0 65% 51%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 10% 95%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 180 10% 95%;
+    --muted-foreground: 180 15% 45%;
 
-    --accent: 175 60% 50%;
+    --accent: 180 80% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -44,15 +46,15 @@ All colors MUST be HSL.
     --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 50%;
+    --border: 180 15% 88%;
+    --input: 180 15% 88%;
+    --ring: 180 100% 25%;
 
     /* Healthcare-specific design tokens */
     --gradient-primary: linear-gradient(
       135deg,
-      hsl(210 100% 50%),
-      hsl(175 60% 50%)
+      hsl(180 100% 25%),
+      hsl(180 80% 35%)
     );
     --gradient-success: linear-gradient(
       135deg,
