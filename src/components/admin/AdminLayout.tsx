@@ -6,7 +6,8 @@ import {
   FileText,
   BarChart3,
   Megaphone,
-  Bell
+  Bell,
+  Users
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
@@ -23,6 +24,7 @@ interface AdminLayoutProps {
 const sidebarItems = [
   { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
   { id: "hospitals", label: "Hospitals", icon: Building2 },
+  { id: "users", label: "Users", icon: Users },
   { id: "requests", label: "Requests", icon: FileText },
   { id: "reports", label: "Reports", icon: BarChart3 },
   { id: "announcements", label: "Announcements", icon: Megaphone },
